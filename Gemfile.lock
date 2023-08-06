@@ -1,24 +1,64 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (7.0.6)
+      activesupport (= 7.0.6)
+    activerecord (7.0.6)
+      activemodel (= 7.0.6)
+      activesupport (= 7.0.6)
+    activesupport (7.0.6)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+    cgi (0.3.6)
+    concurrent-ruby (1.2.2)
+    erb (4.0.2)
+      cgi (>= 0.3.3)
+    i18n (1.14.1)
+      concurrent-ruby (~> 1.0)
+    minitest (5.19.0)
+    multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     rack (2.2.8)
     rack-protection (3.0.6)
       rack
+    rake (13.0.6)
     ruby2_keywords (0.0.5)
     sinatra (3.0.6)
       mustermann (~> 3.0)
       rack (~> 2.2, >= 2.2.4)
       rack-protection (= 3.0.6)
       tilt (~> 2.0)
+    sinatra-activerecord (2.0.26)
+      activerecord (>= 4.1)
+      sinatra (>= 1.0)
+    sinatra-contrib (3.0.6)
+      multi_json
+      mustermann (~> 3.0)
+      rack-protection (= 3.0.6)
+      sinatra (= 3.0.6)
+      tilt (~> 2.0)
     tilt (2.2.0)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    webrick (1.8.1)
 
 PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
+  activerecord
+  erb
+  rake
   sinatra
+  sinatra-activerecord
+  sinatra-contrib
+  webrick
+
+RUBY VERSION
+   ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.14
+   2.4.18
